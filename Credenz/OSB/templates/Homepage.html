@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		{% load staticfiles %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Online Slot Booking </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static "http://fonts.googleapis.com/css?family=Roboto:400,100,300,500" %}">
+        <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+        <link rel="stylesheet" href="{% static "assets/font-awesome/css/font-awesome.min.css" %}">
+		<link rel="stylesheet" href="{% static "assets/css/form-elements.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+      <link rel="shortcut icon" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static "assets/ico/favicon.jpeg" %}">
+		
+		<style>
+		body
+		{
+			background-image:url("{% static "1.jpg" %}");
+		}
+		</style>
+    </head>
+
+    <body style="background-image:src("{ static "assets/1.jpg" %}")">
+        <!-- navbar -->
+     <nav class="navbar navbar-inverse" role="navigation" style="background : rgba(0,0,0,0); border: 0px; margin-top:1%">
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <img src="{% static "assets/ico/ieeelogo.png" %}" class = "img-fluid" alt = "IEEE" style="height : 50px">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <label data-toggle="modal" data-target=".bs-example-modal-sm-1" style="padding-left:20px;padding-right:20px;font-size:25px;">Instructions </label>
+   <!-- <button class="glyphicon glyphicon-log-out" data-toggle="modal" data-target=".bs-example-modal-sm" style="padding-left:40px;background:rgba(0,0,0,0);border:0px;height:30px;"></button>
+-->
+<div class="modal bs-example-modal-sm-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header"><h4 style="text-align:left;">Read the instructions carefully...</h4></div>
+      <div class="modal-body" style="text-align:left;"><ul><li>Login with Registration Id on your receipt and Email Address entered while registration.</li>
+      <li>Select event(s) according to the receipt.</li>
+      <li>Select slot as per your convenience by clicking on the time slots.</li>
+      <li>Once you book the slot you cannot change it or opt for it again.</li>
+      <li>After booking slot you will receive email regarding your slot details.</li>
+      <li>For any queries contact us on below given contacts.</li></ul></div>
+    </div>
+  </div>
+</div>
+                 <img src="{% static "assets/ico/logopisb.png" %}" class = "img-fluid" alt = "PISB" style="height : 50px; padding:1% ">
+
+    </ul>
+  </div>
+</nav>
+        <!-- Top content -->
+       <div class="row" style="align:center;">
+        
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="top-content">
+        	
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12 text">
+                        <br>
+                            <h4><strong></strong></h4>
+                           
+                            <h1><strong> CLASH/REVERSE CODING '17 </strong></h1>
+                            
+                            <h1> Slot Booking</h1>
+                           
+                        </div>
+                    </div>
+            
+					<br>
+					<div class="col-lg-3">
+					
+					</div>
+                        <div class="col-lg-6 col-sm-12 col-xs-12" style="align:center;">
+                           <br><br>
+                            <div class="form-bottom">
+                            
+			                    <form role="form" action="/booking" method="post" class="login-form">{% csrf_token %}
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="uname" placeholder="Registration ID" class="form-username form-control" id="form-username">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<input type="password" name="pword" placeholder="Email Address" class="form-password form-control" id="form-password">
+			                        </div>
+			                        <button type="submit" class="btn">Login</button>
+			                    </form>
+			                    {{ err_msg }}
+		                    </div>
+                        </div>
+                        <div class="col-lg-3">
+                        
+                        </div>
+                 </div>
+                      
+                
+            </div>
+
+        <div class="col-lg-12 col-sm-12 col-xs-12" style="text-align:left;color:white;">
+        <br>
+        For queries contact us:<br>Ajay Sabale:+91-8600070474<br>Saurabh Awinashe:+91-9975744478<br>Email:pisbclash.credenz17@gmail.com<br>
+        </div>
+        </div>
+        
+        
+<!-- /////////////////////////////////// -->
+          
+ 
+        <!-- Javascript -->
+
+
+
+
+
+        <script src="{% static "assets/js/jquery-1.11.1.min.js" %}"></script>
+        <script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.backstretch.min.js" %}"></script>
+        <script src="{% static "assets/js/scripts.js" %}"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+        
+    </body>
+
+</html>

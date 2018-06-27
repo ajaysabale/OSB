@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		{% load staticfiles %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Online Slot Booking</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css" %}">
+        <link rel="stylesheet" href="{% static "assets/font-awesome/css/font-awesome.min.css" %}">
+		<link rel="stylesheet" href="{% static "assets/css/form-elements.css" %}">
+        <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+       <link rel="shortcut icon" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "assets/ico/favicon.jpeg" %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static "assets/ico/favicon.jpeg" %}">
+
+		<style>
+		body
+		{
+			background-image:url("{% static "1.jpg" %}");
+		}
+		h1
+		{
+			color:white;
+		}
+		table
+		{
+			margin-left:300px;
+			margin-top:50px;
+			width:800px;
+			text-align:center;
+			border-style:solid;
+			border-color:solid black;
+		}
+		tr
+		{
+			text-align:center;
+			border-style:solid;
+			border-color:solid black;
+		}
+		
+		th
+		{
+			padding-top:5px;
+			padding-bottom:5px;
+			background:white;
+			text-align:center;
+			font-size:25px;
+		}
+		td
+		{
+			padding-top:3px;
+			padding-bottom:3px;
+			background:grey;
+			color:white;
+			font-size:20px;
+		}
+		h4:hover
+		{
+			color:blue;
+		}
+		
+		
+		
+		</style>
+
+
+
+    </head>
+
+    <body>
+   <nav class="navbar navbar-inverse" role="navigation" style="background : rgba(0,0,0,0); border: 0px; margin-top:1%">
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-left">
+        <img src="{% static "assets/ico/ieeelogo.png" %}" class = "img-fluid" alt = "IEEE" style="height : 50px">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <label data-toggle="modal" data-target=".bs-example-modal-sm-1" style="padding-left:20px;padding-right:20px;font-size:25px;">Instructions </label>
+   <!-- <button class="glyphicon glyphicon-log-out" data-toggle="modal" data-target=".bs-example-modal-sm" style="padding-left:40px;background:rgba(0,0,0,0);border:0px;height:30px;"></button>
+-->
+<div class="modal bs-example-modal-sm-1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <div class="modal-header"><h4 style="text-align:left;">Read the instructions carefully...</h4></div><div class="modal-body" style="text-align:left;"><ul><li>Login with Registration Id on your receipt and Email Address entered while registration.</li>
+      <li>Select event(s) according to the receipt.</li>
+      <li>Select slot as per your convenience by clicking on the time slots.</li>
+      <li>Once you book the slot you cannot change it or opt for it again.</li>
+      <li>After booking slot you will receive email regarding your slot details.</li>
+      <li>For any queries contact us:</li>
+      <h5>Ajay Sabale:+91-8600070474</h5>
+      <h5>Saurabh Awinashe:+91-9975744478</h5></ul></div>
+    </div>
+  </div>
+</div>
+    <label style="font-size:25px;"><a href="/choose" style="color:grey;">Back to Events </a></label>
+    <label data-toggle="modal" data-target=".bs-example-modal-sm" style="padding-left:20px;padding-right:20px;font-size:25px;">Logout </label>
+   <!-- <button class="glyphicon glyphicon-log-out" data-toggle="modal" data-target=".bs-example-modal-sm" style="padding-left:40px;background:rgba(0,0,0,0);border:0px;height:30px;"></button>
+-->
+
+<div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
+      <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+      <div class="modal-footer"><a href="/log_out" class="btn btn-primary btn-block" style="background:#000;color:white;">Logout</a></div>
+    </div>
+  </div>
+</div>
+                 <img src="{% static "assets/ico/logopisb.png" %}" class = "img-fluid" alt = "PISB" style="height : 50px; padding:1% ">
+
+    </ul>
+  </div>
+</nav> 
+        <!-- Top content -->
+        <div class="col-lg-12">
+        <div style="color:white;">
+		
+        {% if "Clash" == etname %}
+        <h1><strong> CLASH </strong> </h1>
+        {% else  %}
+        <h1><strong> REVERSE CODING </strong> </h1>
+        {% endif %}
+        </div>
+        </div>
+         
+        <!-- <div class="col-lg-12">
+         	<br>
+         	<table>
+         		<tr>
+         			<th rowspan={{ qcount }}>
+         				<h3>15/09/2017</h3>
+         			</th>
+         		</tr>
+         		
+         		{% for i in q %}
+         			<tr>
+         			<td>
+         				<a href="{{ i.day }}/{{ i.slotid }}"><h4>{{ i.timing }}</h4></a>
+         			</td>
+         			</tr>
+         			{% endfor %}
+         			<tr>
+         			<th rowspan={{ tcount }}>
+         				<h3>16/09/2017</h3>
+         			</th>
+         			</tr>
+         			{% for r in t %}
+         			<tr>
+         			<td>
+         				<a href="{{ r.day }}/{{ r.slotid }}"><h4>{{ r.timing }}</h4></a>
+         			</td>
+         			</tr>
+         			{% endfor %}
+         			
+         		
+         	</table>
+         </div> -->
+         <div class="container">
+         <div class="row" style="float:left;">
+         <div class="col-lg-12"> 
+         <h3><label style="color:rgb(255,255,255);">Choose the slot that best suits you</label></h3>
+         <h3><label style="color:rgb(0,255,0);">{{ msg }}</label></h3>
+         	<div class="col-lg-6 col-sm-12 col-xs-12">
+         		<table style="margin-left:0px;width:550px;">
+         			<tr>
+         				<th>
+         					<p>15/09/2017</p>
+         				</th>
+         			</tr>
+         			{% for i in q %}
+         			<tr>
+         				<td>
+         					<a href="/{{ etname }}/{{ i.day }}/{{ i.slotid }}" style="color:white;"><h4 >{{ i.timing }}</h4></a>
+         				</td>
+         			</tr>
+         			{% endfor %}
+         		</table>
+         	</div>
+         	<div class="col-lg-6 col-sm-12 col-xs-12">
+ 				<table style="margin-left:0px;width:550px;">
+         			<tr>
+         				<th>
+         					<p>16/09/2017</p>
+         				</th>
+         			</tr>
+         			{% for r in t %}
+         			<tr>
+         				<td>
+         					<a href="/{{ etname }}/{{ r.day }}/{{ r.slotid }}" style="color:white;"><h4 >{{ r.timing }}</h4></a>
+         				</td>
+         			</tr>
+         			{% endfor %}
+         		</table>        		
+         	</div>
+         </div>
+         </div>
+         </div>
+         
+         
+        <!-- Javascript -->
+        <script src="{% static "assets/js/jquery-1.11.1.min.js" %}"></script>
+        <script src="{% static "assets/bootstrap/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "assets/js/jquery.backstretch.min.js" %}"></script>
+        <script src="{% static "assets/js/scripts.js" %}"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

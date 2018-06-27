@@ -1,0 +1,21 @@
+
+<form action="submit" method="post">
+{% csrf_token %}
+
+<select name="day">
+	<option value="Friday">Friday 
+	</option>
+	<option value="Saturday">Saturday  
+	</option>
+</select>
+
+<select name="time">
+{% for i in q %}
+	<option value="{{ i.timing }}"> {{ i.timing }} 
+	</option>
+{% endfor %}
+</select>
+<input type="submit" value="Submit">
+</form>
+<a href="/log_out">Logout</a>
+{{ msg }}
