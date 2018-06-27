@@ -8,12 +8,19 @@ were booked.
 This project was developed by using Python-based Django Framework.
 
 To run the project-
+
   ->cd Credenz
+  
   ->python manage.py runserver
+  
   ->Login using sample credentials-
+      
       RegistrationID:1700
+      
       Email-address:ajaysabale07@gmail.com
+  
   ->Read the instructions and book the slots.
+  
   ->You will receive and acknowledgement email with booking details.
   
       
